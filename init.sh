@@ -7,8 +7,9 @@ DIR=$(cd `dirname $0` && pwd)
 # write any additional symlinks for other source files in the form
 # ln -sf $DIR/${dotfile you want to link} ${dotfile you want to overwrite}
 
-ln -sf $DIR/.bashrc ~/.bashrc
-ln -sf $DIR/.vimrc ~/.vimrc
-ln -sf $DIR/.zshrc ~/.zshrc
-ln -sf $DIR/.gitconfig ~/.gitconfig
+DOTFILES=( '.bashrc' '.vimrc' '.zshrc' '.gitconfig' )
 
+for dotfile in "$DOTFILES[@]"
+do
+    ln -sf ${DIR}/${dotfile} ~/${dotfile}
+done
