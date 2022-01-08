@@ -3,7 +3,6 @@
 
 #Adding directories to PATH
 export PATH="$PATH:$HOME/dotfiles/scripts"
-source "$HOME/dotfiles/scripts/gh_completion.sh"
 #bring vim as default editor
 export EDITOR=vim
 

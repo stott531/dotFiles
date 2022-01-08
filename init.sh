@@ -9,7 +9,7 @@ DIR=$(cd `dirname $0` && pwd)
 
 DOTFILES=( '.bashrc' '.vimrc' '.zshrc' '.gitconfig' )
 
-for dotfile in "$DOTFILES[@]"
+for dotfile in "${DOTFILES[@]}"
 do
     ln -sf ${DIR}/${dotfile} ~/${dotfile}
 done
