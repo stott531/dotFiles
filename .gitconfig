@@ -1,6 +1,6 @@
 [user]
-	email = grantmaingilson@gmail.com
-	name = Grant Gilson
+	email = stephenott531@gmail.commit
+	name = Stephen Ott
 [alias]
 	stat = status
 	appendIgnore = "! git ls-files . --exclude-standard --others >> .gitignore"

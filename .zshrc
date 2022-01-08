@@ -8,7 +8,7 @@ export ZSH="/home/grant/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="pygmalion"
+ZSH_THEME="jonathan"
 
 
 # Set list of themes to pick from when loading at random
@@ -69,18 +69,22 @@ ZSH_THEME="pygmalion"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(
-	git
-	z
+	archlinux
 	colored-man-pages
-	extract
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	fzf
+    colorize
 	docker
-	pip
-	zsh-completions
+	extract
 	fancy-ctrl-z
+	git
+	pip
+	python
+	thefuck
+	z
+	zsh-autosuggestions
+	zsh-completions
+	zsh-syntax-highlighting
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -111,12 +115,25 @@ source ~/.bashrc
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
+
+alias grep="grep --color"
+alias ff="find . -type f -name"
+alias h="history"
+alias lc="| wc -l"
+
+alias copy="xclip -sel clip"
+alias paste="xclip -o -sel clip"
+
+alias A="| awk"
+alias G="| grep"
+alias H="| head"
+alias T="| tail"
+alias L="| less"
+
 
 # Keybinds to have ctrl-delete and ctrl-backspace work have similar behavior to GUI's
 bindkey -M emacs '^[[3;5~' kill-word
 bindkey '^H' backward-kill-word
-
-
